@@ -4,7 +4,8 @@ on:
   workflow_dispatch:
     # Allow manual triggering
   push:
-    branches: [ * ]
+    branches:
+      - '**'  
     paths: [ '.github/workflows/update-apps.yml' ]
 
 jobs:
