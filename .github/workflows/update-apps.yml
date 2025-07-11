@@ -28,199 +28,25 @@ jobs:
       run: |
         npm init -y
         npm install @octokit/rest@latest playwright@latest
-        
-    - name: Install Playwright browsers
-      run: |
         npx playwright install --with-deps chromium
         
     - name: Discover GitHub Pages apps
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        node << 'EOF'
-        const { Octokit } = require('@octokit/rest');
-        const fs = require('fs');
-        
-        async function discoverGitHubPagesApps() {
-          const octokit = new Octokit({
-            auth: process.env.GITHUB_TOKEN
-          });
-          
-          try {
-            // Get all repositories for the user with proper pagination
-            let allRepos = [];
-            let page = 1;
-            let hasMore = true;
-            
-            while (hasMore) {
-              console.log(`Fetching page ${page} of repositories...`);
-              const { data: repos } = await octokit.rest.repos.listForUser({
-                username: 'DanielMeixner',
-                per_page: 100,
-                page: page,
-                sort: 'updated',
-                type: 'all'
-              });
-              
-              console.log(`Page ${page}: Found ${repos.length} repositories`);
-              allRepos = allRepos.concat(repos);
-              
-              // Check if there are more pages - if we got less than 100 repos, we're done
-              hasMore = repos.length === 100;
-              page++;
-              
-              // Safety check to avoid infinite loops
-              if (page > 50) {
-                console.log('Reached maximum page limit (50), stopping pagination');
-                break;
-              }
-            }
-            
-            console.log(`Total repositories found: ${allRepos.length}`);
-            console.log('Repository names:', allRepos.map(r => r.name).join(', '));
-            
-            // Filter repositories with GitHub Pages enabled
-            const pagesRepos = allRepos.filter(repo => {
-              const hasPages = repo.has_pages;
-              console.log(`${repo.name}: has_pages=${hasPages}`);
-              return hasPages;
-            });
-            console.log(`Repositories with GitHub Pages: ${pagesRepos.length}`);
-            console.log('Pages repositories:', pagesRepos.map(r => r.name).join(', '));
-            
-            const apps = [];
-            
-            for (const repo of pagesRepos) {
-              console.log(`Processing repository: ${repo.name}`);
-              
-              // Get additional repository information
-              const { data: repoDetails } = await octokit.rest.repos.get({
-                owner: 'DanielMeixner',
-                repo: repo.name
-              });
-              
-              // Try to get the pages URL
-              let pagesUrl = '';
-              try {
-                const { data: pages } = await octokit.rest.repos.getPages({
-                  owner: 'DanielMeixner',
-                  repo: repo.name
-                });
-                pagesUrl = pages.html_url;
-              } catch (error) {
-                // If pages API fails, construct URL based on repository name
-                if (repo.name === 'DanielMeixner.github.io') {
-                  pagesUrl = 'https://danielmeixner.github.io';
-                } else {
-                  pagesUrl = `https://danielmeixner.github.io/${repo.name}`;
-                }
-              }
-              
-              // Extract tags from topics and language
-              const tags = [];
-              if (repoDetails.topics) {
-                tags.push(...repoDetails.topics.map(topic => 
-                  topic.charAt(0).toUpperCase() + topic.slice(1)
-                ));
-              }
-              if (repoDetails.language) {
-                tags.push(repoDetails.language);
-              }
-              
-              // Create app entry
-              const app = {
-                name: repo.name === 'DanielMeixner.github.io' ? 'DanielMeixner.github.io' : repo.name,
-                description: repoDetails.description || 'No description available',
-                url: pagesUrl,
-                repository: repo.html_url,
-                screenshot: `screenshots/${repo.name}.png`, // Will be populated by screenshot step
-                tags: tags,
-                language: repoDetails.language || 'Unknown',
-                stars: repoDetails.stargazers_count,
-                forks: repoDetails.forks_count,
-                updatedAt: repoDetails.updated_at
-              };
-              
-              apps.push(app);
-            }
-            
-            // Sort apps by update date (most recent first)
-            apps.sort((a, b) => new Date(b.updatedAt) - new Date(a.updatedAt));
-            
-            // Create the apps data structure
-            const appsData = {
-              lastUpdated: new Date().toISOString(),
-              totalApps: apps.length,
-              apps: apps
-            };
-            
-            // Write to apps-data.json
-            fs.writeFileSync('apps-data.json', JSON.stringify(appsData, null, 2));
-            
-            console.log(`Successfully discovered ${apps.length} GitHub Pages apps`);
-            console.log('Apps found:', apps.map(app => app.name).join(', '));
-            
-          } catch (error) {
-            console.error('Error discovering GitHub Pages apps:', error);
-            process.exit(1);
-          }
-        }
-        
-        discoverGitHubPagesApps();
-        EOF
+        echo "Starting GitHub Pages app discovery..."
+        node discover-apps.js
         
     - name: Take screenshots
       run: |
-        # Create screenshots directory if it doesn't exist
-        mkdir -p screenshots
-        
-        # Take screenshots using Playwright
-        node << 'EOF'
-        const { chromium } = require('playwright');
-        const fs = require('fs');
-        
-        async function takeScreenshots() {
-          // Read the apps data to get URLs
-          const appsData = JSON.parse(fs.readFileSync('apps-data.json', 'utf8'));
-          
-          const browser = await chromium.launch();
-          const page = await browser.newPage();
-          
-          // Set viewport size for consistent screenshots
-          await page.setViewportSize({ width: 1200, height: 800 });
-          
-          for (const app of appsData.apps) {
-            try {
-              console.log(`Taking screenshot for ${app.name} at ${app.url}`);
-              
-              // Set a timeout and wait for the page to load
-              await page.goto(app.url, { waitUntil: 'networkidle', timeout: 30000 });
-              
-              // Wait a bit more for any dynamic content
-              await page.waitForTimeout(2000);
-              
-              // Take screenshot
-              const screenshotPath = `screenshots/${app.name}.png`;
-              await page.screenshot({ path: screenshotPath, fullPage: false });
-              
-              console.log(`Screenshot saved: ${screenshotPath}`);
-              
-            } catch (error) {
-              console.error(`Failed to take screenshot for ${app.name}:`, error.message);
-            }
-          }
-          
-          await browser.close();
-        }
-        
-        takeScreenshots().catch(console.error);
-        EOF
+        echo "Starting screenshot capture..."
+        node take-screenshots.js
         
     - name: Commit and push changes
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add apps-data.json screenshots/
+        git add apps-data.json screenshots/ discover-apps.js take-screenshots.js
         if git diff --staged --quiet; then
           echo "No changes to commit"
         else
