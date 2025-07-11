@@ -1,17 +1,40 @@
 {
-  "lastUpdated": "2025-07-11T17:18:59.221Z",
-  "totalApps": 2,
+  "lastUpdated": "2025-07-11T18:49:48.659Z",
+  "totalApps": 8,
   "apps": [
+    {
+      "name": "appcatalog",
+      "description": "No description available",
+      "url": "https://danielmeixner.github.io/appcatalog/",
+      "repository": "https://github.com/DanielMeixner/appcatalog",
+      "screenshot": "screenshots/appcatalog.png",
+      "tags": [],
+      "language": "Unknown",
+      "stars": 0,
+      "forks": 0,
+      "updatedAt": "2025-07-11T17:28:04Z"
+    },
+    {
+      "name": "fretboardking",
+      "description": "No description available",
+      "url": "https://danielmeixner.github.io/fretboardking/",
+      "repository": "https://github.com/DanielMeixner/fretboardking",
+      "screenshot": "screenshots/fretboardking.png",
+      "tags": [
+        "TypeScript"
+      ],
+      "language": "TypeScript",
+      "stars": 0,
+      "forks": 0,
+      "updatedAt": "2025-07-11T17:20:03Z"
+    },
     {
       "name": "sbomdepsviewer",
       "description": "A Vite React app to visualize SPDX SBOM dependencies as a graph in the browser.",
-      "url": "https://danielmeixner.github.io/sbomdepsviewer",
+      "url": "https://danielmeixner.github.io/sbomdepsviewer/",
       "repository": "https://github.com/DanielMeixner/sbomdepsviewer",
-      "screenshot": null,
+      "screenshot": "screenshots/sbomdepsviewer.png",
       "tags": [
-        "React",
-        "Visualization",
-        "SBOM",
         "JavaScript"
       ],
       "language": "JavaScript",
@@ -21,19 +44,71 @@
     },
     {
       "name": "DanielMeixner.github.io",
-      "description": "Main GitHub Pages site for Daniel Meixner",
-      "url": "https://danielmeixner.github.io",
+      "description": "No description available",
+      "url": "https://danielmeixner.github.io/",
       "repository": "https://github.com/DanielMeixner/DanielMeixner.github.io",
-      "screenshot": null,
+      "screenshot": "screenshots/DanielMeixner.github.io.png",
+      "tags": [],
+      "language": "Unknown",
+      "stars": 0,
+      "forks": 1,
+      "updatedAt": "2022-01-04T13:56:17Z"
+    },
+    {
+      "name": "GitHubPagesSetup",
+      "description": "No description available",
+      "url": "https://danielmeixner.github.io/GitHubPagesSetup/",
+      "repository": "https://github.com/DanielMeixner/GitHubPagesSetup",
+      "screenshot": "screenshots/GitHubPagesSetup.png",
       "tags": [
-        "Portfolio",
-        "Main Site",
+        "Dockerfile"
+      ],
+      "language": "Dockerfile",
+      "stars": 0,
+      "forks": 0,
+      "updatedAt": "2021-12-31T14:37:09Z"
+    },
+    {
+      "name": "newrepo",
+      "description": "No description available",
+      "url": "https://danielmeixner.github.io/newrepo/",
+      "repository": "https://github.com/DanielMeixner/newrepo",
+      "screenshot": "screenshots/newrepo.png",
+      "tags": [
+        "Dockerfile"
+      ],
+      "language": "Dockerfile",
+      "stars": 0,
+      "forks": 0,
+      "updatedAt": "2021-12-31T11:40:32Z"
+    },
+    {
+      "name": "kube_labs",
+      "description": "No description available",
+      "url": "https://danielmeixner.github.io/kube_labs/",
+      "repository": "https://github.com/DanielMeixner/kube_labs",
+      "screenshot": "screenshots/kube_labs.png",
+      "tags": [
         "HTML"
       ],
       "language": "HTML",
       "stars": 0,
-      "forks": 1,
-      "updatedAt": "2022-01-04T13:56:17Z"
+      "forks": 0,
+      "updatedAt": "2020-03-23T11:20:04Z"
+    },
+    {
+      "name": "PartsUnlimitedDNC20",
+      "description": ".Net Core + SQL Azure app for DevOps Scenarios",
+      "url": "https://danielmeixner.github.io/PartsUnlimitedDNC20/",
+      "repository": "https://github.com/DanielMeixner/PartsUnlimitedDNC20",
+      "screenshot": "screenshots/PartsUnlimitedDNC20.png",
+      "tags": [
+        "C#"
+      ],
+      "language": "C#",
+      "stars": 0,
+      "forks": 0,
+      "updatedAt": "2018-04-23T12:37:12Z"
     }
   ]
 }
