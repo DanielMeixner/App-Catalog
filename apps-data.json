@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-07-11T18:49:48.659Z",
+  "lastUpdated": "2025-07-11T19:59:06.623Z",
   "totalApps": 8,
   "apps": [
     {
@@ -8,11 +8,13 @@
       "url": "https://danielmeixner.github.io/appcatalog/",
       "repository": "https://github.com/DanielMeixner/appcatalog",
       "screenshot": "screenshots/appcatalog.png",
-      "tags": [],
-      "language": "Unknown",
+      "tags": [
+        "JavaScript"
+      ],
+      "language": "JavaScript",
       "stars": 0,
       "forks": 0,
-      "updatedAt": "2025-07-11T17:28:04Z"
+      "updatedAt": "2025-07-11T19:58:21Z"
     },
     {
       "name": "fretboardking",
