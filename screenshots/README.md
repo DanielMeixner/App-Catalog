@@ -1,22 +1,24 @@
 # Screenshots
 
-This directory contains screenshots of the GitHub Pages Apps Catalog.
+This directory will contain screenshots of the GitHub Pages Apps Catalog.
 
-## Desktop View
-![Desktop View](desktop-view.png)
+## Current Status
 
-## Mobile View  
-![Mobile View](mobile-view.png)
-
-## Screenshot Generation
-
-Screenshots are automatically generated when possible. If you need to manually generate screenshots:
-
-1. Use a tool like [Playwright](https://playwright.dev/) or [Puppeteer](https://pptr.dev/)
-2. Navigate to the live site
-3. Take screenshots at different viewport sizes
-4. Save as PNG files in this directory
+Screenshot functionality is planned for future implementation. The application currently works without screenshots, displaying placeholder text where screenshots would appear.
 
 ## Future Enhancement
 
-The GitHub Action workflow can be extended to automatically generate screenshots using a headless browser.
+The GitHub Action workflow can be extended to automatically generate screenshots using a headless browser such as:
+
+1. [Playwright](https://playwright.dev/) 
+2. [Puppeteer](https://pptr.dev/)
+3. [Selenium](https://www.selenium.dev/)
+
+## Manual Screenshot Generation
+
+To manually generate screenshots:
+
+1. Navigate to the live application
+2. Take screenshots at different viewport sizes (desktop: 1920x1080, mobile: 375x667)
+3. Save as PNG files in this directory
+4. Update the apps-data.json file to reference the screenshot files

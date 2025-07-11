@@ -1,9 +1,6 @@
 name: Update GitHub Pages Apps
 
 on:
-  schedule:
-    # Run every day at 02:00 UTC
-    - cron: '0 2 * * *'
   workflow_dispatch:
     # Allow manual triggering
   push:
@@ -45,15 +42,32 @@ jobs:
           });
           
           try {
-            // Get all repositories for the user
-            const { data: repos } = await octokit.rest.repos.listForUser({
-              username: 'DanielMeixner',
-              per_page: 100,
-              sort: 'updated'
-            });
+            // Get all repositories for the user with pagination
+            let allRepos = [];
+            let page = 1;
+            let hasMore = true;
+            
+            while (hasMore) {
+              console.log(`Fetching page ${page} of repositories...`);
+              const { data: repos } = await octokit.rest.repos.listForUser({
+                username: 'DanielMeixner',
+                per_page: 100,
+                page: page,
+                sort: 'updated'
+              });
+              
+              allRepos = allRepos.concat(repos);
+              
+              // Check if there are more pages
+              hasMore = repos.length === 100;
+              page++;
+            }
+            
+            console.log(`Total repositories found: ${allRepos.length}`);
             
             // Filter repositories with GitHub Pages enabled
-            const pagesRepos = repos.filter(repo => repo.has_pages);
+            const pagesRepos = allRepos.filter(repo => repo.has_pages);
+            console.log(`Repositories with GitHub Pages: ${pagesRepos.length}`);
             
             const apps = [];
             
@@ -138,9 +152,11 @@ jobs:
         
     - name: Take screenshots (optional)
       run: |
-        # This step could be enhanced with a screenshot service
-        # For now, we'll skip screenshots to keep the workflow simple
-        echo "Screenshot functionality can be added later"
+        # Screenshot functionality is planned for future implementation
+        # This could be enhanced with tools like Playwright or Puppeteer
+        # For now, apps will display with placeholder screenshots
+        echo "Screenshot functionality is planned for future implementation"
+        echo "Apps will display with 'Screenshot not available' placeholders"
         
     - name: Commit and push changes
       run: |
