@@ -27,6 +27,7 @@ jobs:
     - name: Install dependencies
       run: |
         npm init -y
+        npm pkg set type="module"
         npm install @octokit/rest@latest playwright@latest
         npx playwright install --with-deps chromium
         
