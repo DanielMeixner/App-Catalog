@@ -102,29 +102,7 @@ async function discoverGitHubPagesApps() {
           tags.push(repoDetails.language);
         }
         
-        // Get README content for description
-        let readmeDescription = repoDetails.description || 'No description available';
-        try {
-          const { data: readme } = await octokit.rest.repos.getReadme({
-            owner: 'DanielMeixner',
-            repo: repo.name
-          });
-          
-          // Decode base64 content
-          const readmeContent = Buffer.from(readme.content, 'base64').toString('utf-8');
-          
-          // Extract first paragraph or first few lines as description
-          const lines = readmeContent.split('\n').filter(line => line.trim() && !line.startsWith('#'));
-          if (lines.length > 0) {
-            // Take first meaningful line, limit to 200 characters
-            readmeDescription = lines[0].trim().substring(0, 200);
-            if (readmeDescription.length === 200) {
-              readmeDescription += '...';
-            }
-          }
-        } catch (error) {
-          console.log(`Could not fetch README for ${repo.name}:`, error.message);
-        }
+
         
         // Get contributors count
         let contributorsCount = 0;
@@ -161,7 +139,7 @@ async function discoverGitHubPagesApps() {
         // Create app entry
         const app = {
           name: repo.name === 'DanielMeixner.github.io' ? 'DanielMeixner.github.io' : repo.name,
-          description: readmeDescription,
+          description: repoDetails.description || 'No description available',
           url: pagesUrl,
           repository: repo.html_url,
           screenshot: `screenshots/${repo.name}.png`,
