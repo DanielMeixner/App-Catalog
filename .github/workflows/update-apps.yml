@@ -26,7 +26,11 @@ jobs:
     - name: Install dependencies
       run: |
         npm init -y
-        npm install @octokit/rest@latest
+        npm install @octokit/rest@latest playwright@latest
+        
+    - name: Install Playwright browsers
+      run: |
+        npx playwright install --with-deps chromium
         
     - name: Discover GitHub Pages apps
       env:
@@ -42,7 +46,7 @@ jobs:
           });
           
           try {
-            // Get all repositories for the user with pagination
+            // Get all repositories for the user with proper pagination
             let allRepos = [];
             let page = 1;
             let hasMore = true;
@@ -53,21 +57,35 @@ jobs:
                 username: 'DanielMeixner',
                 per_page: 100,
                 page: page,
-                sort: 'updated'
+                sort: 'updated',
+                type: 'all'
               });
               
+              console.log(`Page ${page}: Found ${repos.length} repositories`);
               allRepos = allRepos.concat(repos);
               
-              // Check if there are more pages
+              // Check if there are more pages - if we got less than 100 repos, we're done
               hasMore = repos.length === 100;
               page++;
+              
+              // Safety check to avoid infinite loops
+              if (page > 50) {
+                console.log('Reached maximum page limit (50), stopping pagination');
+                break;
+              }
             }
             
             console.log(`Total repositories found: ${allRepos.length}`);
+            console.log('Repository names:', allRepos.map(r => r.name).join(', '));
             
             // Filter repositories with GitHub Pages enabled
-            const pagesRepos = allRepos.filter(repo => repo.has_pages);
+            const pagesRepos = allRepos.filter(repo => {
+              const hasPages = repo.has_pages;
+              console.log(`${repo.name}: has_pages=${hasPages}`);
+              return hasPages;
+            });
             console.log(`Repositories with GitHub Pages: ${pagesRepos.length}`);
+            console.log('Pages repositories:', pagesRepos.map(r => r.name).join(', '));
             
             const apps = [];
             
@@ -114,7 +132,7 @@ jobs:
                 description: repoDetails.description || 'No description available',
                 url: pagesUrl,
                 repository: repo.html_url,
-                screenshot: null, // Will be populated later if screenshot service is implemented
+                screenshot: `screenshots/${repo.name}.png`, // Will be populated by screenshot step
                 tags: tags,
                 language: repoDetails.language || 'Unknown',
                 stars: repoDetails.stargazers_count,
@@ -150,22 +168,61 @@ jobs:
         discoverGitHubPagesApps();
         EOF
         
-    - name: Take screenshots (optional)
+    - name: Take screenshots
       run: |
-        # Screenshot functionality is planned for future implementation
-        # This could be enhanced with tools like Playwright or Puppeteer
-        # For now, apps will display with placeholder screenshots
-        echo "Screenshot functionality is planned for future implementation"
-        echo "Apps will display with 'Screenshot not available' placeholders"
+        # Create screenshots directory if it doesn't exist
+        mkdir -p screenshots
+        
+        # Take screenshots using Playwright
+        node << 'EOF'
+        const { chromium } = require('playwright');
+        const fs = require('fs');
+        
+        async function takeScreenshots() {
+          // Read the apps data to get URLs
+          const appsData = JSON.parse(fs.readFileSync('apps-data.json', 'utf8'));
+          
+          const browser = await chromium.launch();
+          const page = await browser.newPage();
+          
+          // Set viewport size for consistent screenshots
+          await page.setViewportSize({ width: 1200, height: 800 });
+          
+          for (const app of appsData.apps) {
+            try {
+              console.log(`Taking screenshot for ${app.name} at ${app.url}`);
+              
+              // Set a timeout and wait for the page to load
+              await page.goto(app.url, { waitUntil: 'networkidle', timeout: 30000 });
+              
+              // Wait a bit more for any dynamic content
+              await page.waitForTimeout(2000);
+              
+              // Take screenshot
+              const screenshotPath = `screenshots/${app.name}.png`;
+              await page.screenshot({ path: screenshotPath, fullPage: false });
+              
+              console.log(`Screenshot saved: ${screenshotPath}`);
+              
+            } catch (error) {
+              console.error(`Failed to take screenshot for ${app.name}:`, error.message);
+            }
+          }
+          
+          await browser.close();
+        }
+        
+        takeScreenshots().catch(console.error);
+        EOF
         
     - name: Commit and push changes
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add apps-data.json
+        git add apps-data.json screenshots/
         if git diff --staged --quiet; then
           echo "No changes to commit"
         else
-          git commit -m "🤖 Update GitHub Pages apps data - $(date -u +"%Y-%m-%d %H:%M:%S UTC")"
+          git commit -m "🤖 Update GitHub Pages apps data and screenshots - $(date -u +"%Y-%m-%d %H:%M:%S UTC")"
           git push
         fi
