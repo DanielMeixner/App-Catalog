@@ -102,10 +102,66 @@ async function discoverGitHubPagesApps() {
           tags.push(repoDetails.language);
         }
         
+        // Get README content for description
+        let readmeDescription = repoDetails.description || 'No description available';
+        try {
+          const { data: readme } = await octokit.rest.repos.getReadme({
+            owner: 'DanielMeixner',
+            repo: repo.name
+          });
+          
+          // Decode base64 content
+          const readmeContent = Buffer.from(readme.content, 'base64').toString('utf-8');
+          
+          // Extract first paragraph or first few lines as description
+          const lines = readmeContent.split('\n').filter(line => line.trim() && !line.startsWith('#'));
+          if (lines.length > 0) {
+            // Take first meaningful line, limit to 200 characters
+            readmeDescription = lines[0].trim().substring(0, 200);
+            if (readmeDescription.length === 200) {
+              readmeDescription += '...';
+            }
+          }
+        } catch (error) {
+          console.log(`Could not fetch README for ${repo.name}:`, error.message);
+        }
+        
+        // Get contributors count
+        let contributorsCount = 0;
+        try {
+          const { data: contributors } = await octokit.rest.repos.listContributors({
+            owner: 'DanielMeixner',
+            repo: repo.name,
+            per_page: 100
+          });
+          contributorsCount = contributors.length;
+        } catch (error) {
+          console.log(`Could not fetch contributors for ${repo.name}:`, error.message);
+        }
+        
+        // Check if it's an Electron app
+        let isElectronApp = false;
+        try {
+          const { data: packageJson } = await octokit.rest.repos.getContent({
+            owner: 'DanielMeixner',
+            repo: repo.name,
+            path: 'package.json'
+          });
+          
+          const packageContent = Buffer.from(packageJson.content, 'base64').toString('utf-8');
+          const packageData = JSON.parse(packageContent);
+          
+          // Check if electron is in dependencies or devDependencies
+          const deps = { ...packageData.dependencies, ...packageData.devDependencies };
+          isElectronApp = !!deps.electron;
+        } catch (error) {
+          console.log(`Could not check Electron dependency for ${repo.name}:`, error.message);
+        }
+        
         // Create app entry
         const app = {
           name: repo.name === 'DanielMeixner.github.io' ? 'DanielMeixner.github.io' : repo.name,
-          description: repoDetails.description || 'No description available',
+          description: readmeDescription,
           url: pagesUrl,
           repository: repo.html_url,
           screenshot: `screenshots/${repo.name}.png`,
@@ -113,7 +169,9 @@ async function discoverGitHubPagesApps() {
           language: repoDetails.language || 'Unknown',
           stars: repoDetails.stargazers_count,
           forks: repoDetails.forks_count,
-          updatedAt: repoDetails.updated_at
+          updatedAt: repoDetails.updated_at,
+          contributors: contributorsCount,
+          isElectronApp: isElectronApp
         };
         
         apps.push(app);

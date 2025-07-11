@@ -91,11 +91,25 @@ class GitHubPagesOverview {
         const content = document.createElement('div');
         content.className = 'app-content';
 
-        // Title
+        // Title with Electron icon if applicable
+        const titleContainer = document.createElement('div');
+        titleContainer.className = 'app-title-container';
+        
         const title = document.createElement('h2');
         title.className = 'app-title';
         title.textContent = app.name;
-        content.appendChild(title);
+        titleContainer.appendChild(title);
+        
+        // Add Electron icon if it's an Electron app
+        if (app.isElectronApp) {
+            const electronIcon = document.createElement('span');
+            electronIcon.className = 'electron-icon';
+            electronIcon.innerHTML = '⚡';
+            electronIcon.title = 'Available as Electron app';
+            titleContainer.appendChild(electronIcon);
+        }
+        
+        content.appendChild(titleContainer);
 
         // Description
         if (app.description) {
@@ -105,19 +119,58 @@ class GitHubPagesOverview {
             content.appendChild(description);
         }
 
+        // Metadata section
+        const metadataContainer = document.createElement('div');
+        metadataContainer.className = 'app-metadata';
+        
+        // Last commit date
+        if (app.updatedAt) {
+            const lastCommit = document.createElement('div');
+            lastCommit.className = 'app-meta-item';
+            const commitDate = new Date(app.updatedAt).toLocaleDateString();
+            lastCommit.innerHTML = `<span class="meta-icon">📅</span> Last updated: ${commitDate}`;
+            metadataContainer.appendChild(lastCommit);
+        }
+        
+        // Contributors
+        if (app.contributors !== undefined) {
+            const contributors = document.createElement('div');
+            contributors.className = 'app-meta-item';
+            contributors.innerHTML = `<span class="meta-icon">👥</span> Contributors: ${app.contributors}`;
+            metadataContainer.appendChild(contributors);
+        }
+        
+        // Stars and forks
+        if (app.stars !== undefined || app.forks !== undefined) {
+            const stats = document.createElement('div');
+            stats.className = 'app-meta-item';
+            let statsText = '';
+            if (app.stars !== undefined) {
+                statsText += `<span class="meta-icon">⭐</span> ${app.stars}`;
+            }
+            if (app.forks !== undefined) {
+                if (statsText) statsText += ' • ';
+                statsText += `<span class="meta-icon">🍴</span> ${app.forks}`;
+            }
+            stats.innerHTML = statsText;
+            metadataContainer.appendChild(stats);
+        }
+        
+        content.appendChild(metadataContainer);
+
         // Tags
         if (app.tags && app.tags.length > 0) {
-            const metaDiv = document.createElement('div');
-            metaDiv.className = 'app-meta';
+            const tagsDiv = document.createElement('div');
+            tagsDiv.className = 'app-tags';
 
             app.tags.forEach(tag => {
                 const tagSpan = document.createElement('span');
                 tagSpan.className = 'app-tag';
                 tagSpan.textContent = tag;
-                metaDiv.appendChild(tagSpan);
+                tagsDiv.appendChild(tagSpan);
             });
 
-            content.appendChild(metaDiv);
+            content.appendChild(tagsDiv);
         }
 
         // Links

@@ -110,11 +110,24 @@ main {
     padding: 1.5rem;
 }
 
+.app-title-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
 .app-title {
     font-size: 1.3rem;
     font-weight: 600;
-    margin-bottom: 0.5rem;
     color: #2c3e50;
+    margin: 0;
+}
+
+.electron-icon {
+    font-size: 1.1rem;
+    color: #ffd700;
+    cursor: help;
 }
 
 .app-description {
@@ -123,7 +136,32 @@ main {
     line-height: 1.5;
 }
 
-.app-meta {
+.app-metadata {
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    background: #f8f9fa;
+    border-radius: 6px;
+    border-left: 3px solid #667eea;
+}
+
+.app-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.app-meta-item:last-child {
+    margin-bottom: 0;
+}
+
+.meta-icon {
+    font-size: 0.9rem;
+}
+
+.app-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
