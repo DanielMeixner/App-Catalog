@@ -1,0 +1,39 @@
+{
+  "lastUpdated": "2025-07-11T17:18:59.221Z",
+  "totalApps": 2,
+  "apps": [
+    {
+      "name": "sbomdepsviewer",
+      "description": "A Vite React app to visualize SPDX SBOM dependencies as a graph in the browser.",
+      "url": "https://danielmeixner.github.io/sbomdepsviewer",
+      "repository": "https://github.com/DanielMeixner/sbomdepsviewer",
+      "screenshot": null,
+      "tags": [
+        "React",
+        "Visualization",
+        "SBOM",
+        "JavaScript"
+      ],
+      "language": "JavaScript",
+      "stars": 0,
+      "forks": 0,
+      "updatedAt": "2025-07-11T16:56:27Z"
+    },
+    {
+      "name": "DanielMeixner.github.io",
+      "description": "Main GitHub Pages site for Daniel Meixner",
+      "url": "https://danielmeixner.github.io",
+      "repository": "https://github.com/DanielMeixner/DanielMeixner.github.io",
+      "screenshot": null,
+      "tags": [
+        "Portfolio",
+        "Main Site",
+        "HTML"
+      ],
+      "language": "HTML",
+      "stars": 0,
+      "forks": 1,
+      "updatedAt": "2022-01-04T13:56:17Z"
+    }
+  ]
+}
