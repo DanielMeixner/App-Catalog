@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Pages Apps Overview - DanielMeixner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>GitHub Pages Apps Overview</h1>
+        <p>Discover all GitHub Pages applications running under danielmeixner.github.io</p>
+    </header>
+
+    <main>
+        <div id="loading" class="loading">
+            <div class="spinner"></div>
+            <p>Loading GitHub Pages applications...</p>
+        </div>
+
+        <div id="apps-container" class="apps-container" style="display: none;">
+            <div id="apps-grid" class="apps-grid">
+                <!-- Apps will be loaded here dynamically -->
+            </div>
+        </div>
+
+        <div id="error-message" class="error-message" style="display: none;">
+            <p>Failed to load GitHub Pages applications. Please try again later.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 DanielMeixner - Automatically updated via GitHub Actions</p>
+        <p>Last updated: <span id="last-updated">Loading...</span></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

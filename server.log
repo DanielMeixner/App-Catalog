@@ -1,0 +1,12 @@
+127.0.0.1 - - [11/Jul/2025 19:50:03] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [11/Jul/2025 19:50:03] "GET /style.css HTTP/1.1" 200 -
+127.0.0.1 - - [11/Jul/2025 19:50:03] "GET /script.js HTTP/1.1" 200 -
+127.0.0.1 - - [11/Jul/2025 19:50:03] "GET /apps-data.json HTTP/1.1" 200 -
+127.0.0.1 - - [11/Jul/2025 19:50:04] "GET /screenshots/appcatalog.png HTTP/1.1" 200 -
+127.0.0.1 - - [11/Jul/2025 19:50:04] "GET /screenshots/fretboardking.png HTTP/1.1" 200 -
+127.0.0.1 - - [11/Jul/2025 19:50:04] "GET /screenshots/sbomdepsviewer.png HTTP/1.1" 200 -
+127.0.0.1 - - [11/Jul/2025 19:50:04] "GET /screenshots/DanielMeixner.github.io.png HTTP/1.1" 200 -
+127.0.0.1 - - [11/Jul/2025 19:50:04] "GET /screenshots/GitHubPagesSetup.png HTTP/1.1" 200 -
+127.0.0.1 - - [11/Jul/2025 19:50:04] "GET /screenshots/newrepo.png HTTP/1.1" 200 -
+127.0.0.1 - - [11/Jul/2025 19:50:04] "GET /screenshots/kube_labs.png HTTP/1.1" 200 -
+127.0.0.1 - - [11/Jul/2025 19:50:04] "GET /screenshots/PartsUnlimitedDNC20.png HTTP/1.1" 200 -

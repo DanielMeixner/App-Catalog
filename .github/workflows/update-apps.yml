@@ -1,0 +1,56 @@
+name: Update GitHub Pages Apps
+
+on:
+  workflow_dispatch:
+    # Allow manual triggering
+  push:
+    branches:
+      - '**'  
+    paths: [ '.github/workflows/update-apps.yml' ]
+
+jobs:
+  update-apps:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: read
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        
+    - name: Install dependencies
+      run: |
+        npm init -y
+        npm pkg set type="module"
+        npm install @octokit/rest@latest playwright@latest
+        npx playwright install --with-deps chromium
+        
+    - name: Discover GitHub Pages apps
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        echo "Starting GitHub Pages app discovery..."
+        node discover-apps.js
+        
+    - name: Take screenshots
+      run: |
+        echo "Starting screenshot capture..."
+        node take-screenshots.js
+        
+    - name: Commit and push changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add apps-data.json screenshots/ discover-apps.js take-screenshots.js
+        if git diff --staged --quiet; then
+          echo "No changes to commit"
+        else
+          git commit -m "🤖 Update GitHub Pages apps data and screenshots - $(date -u +"%Y-%m-%d %H:%M:%S UTC")"
+          git push
+        fi
