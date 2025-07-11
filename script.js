@@ -24,32 +24,10 @@ class GitHubPagesOverview {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
             this.appsData = await response.json();
+            console.log('Successfully loaded apps data:', this.appsData.totalApps, 'apps found');
         } catch (error) {
             console.error('Error loading apps data:', error);
-            // Fallback to hardcoded data for initial setup
-            this.appsData = {
-                lastUpdated: new Date().toISOString(),
-                apps: [
-                    {
-                        name: "DanielMeixner.github.io",
-                        description: "Main GitHub Pages site for Daniel Meixner",
-                        url: "https://danielmeixner.github.io",
-                        repository: "https://github.com/DanielMeixner/DanielMeixner.github.io",
-                        screenshot: null,
-                        tags: ["Portfolio", "Main Site"],
-                        language: "HTML"
-                    },
-                    {
-                        name: "SBOM Dependencies Viewer",
-                        description: "A Vite React app to visualize SPDX SBOM dependencies as a graph in the browser",
-                        url: "https://danielmeixner.github.io/sbomdepsviewer",
-                        repository: "https://github.com/DanielMeixner/sbomdepsviewer",
-                        screenshot: null,
-                        tags: ["React", "Visualization", "SBOM", "Dependencies"],
-                        language: "JavaScript"
-                    }
-                ]
-            };
+            throw error; // Re-throw the error to be handled by the caller
         }
     }
 
