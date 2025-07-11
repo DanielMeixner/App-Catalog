@@ -1,18 +1,31 @@
 # Screenshots
 
-This directory will contain screenshots of the GitHub Pages Apps Catalog.
+This directory contains screenshots of the GitHub Pages applications discovered by the automated workflow.
 
 ## Current Status
 
-Screenshot functionality is planned for future implementation. The application currently works without screenshots, displaying placeholder text where screenshots would appear.
+Screenshot functionality is now implemented using Playwright! The GitHub Action workflow automatically generates screenshots for all discovered GitHub Pages applications.
 
-## Future Enhancement
+## How It Works
 
-The GitHub Action workflow can be extended to automatically generate screenshots using a headless browser such as:
+The GitHub Action workflow:
 
-1. [Playwright](https://playwright.dev/) 
-2. [Puppeteer](https://pptr.dev/)
-3. [Selenium](https://www.selenium.dev/)
+1. **Discovers GitHub Pages Apps**: Scans all repositories for GitHub Pages enabled sites
+2. **Captures Screenshots**: Uses Playwright with Chromium to take screenshots at 1200x800 resolution
+3. **Saves Screenshots**: Stores screenshots as PNG files in this directory
+4. **Updates App Data**: Updates apps-data.json with screenshot paths
+
+## Screenshot Files
+
+Screenshots are automatically generated with the following naming convention:
+- `{repository-name}.png` - Screenshot of the GitHub Pages app
+
+## Automated Generation
+
+Screenshots are automatically generated when:
+- The workflow runs manually via GitHub Actions
+- The workflow is triggered by updates to the discovery script
+- New GitHub Pages apps are discovered
 
 ## Manual Screenshot Generation
 
