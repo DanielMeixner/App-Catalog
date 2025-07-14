@@ -1,7 +1,23 @@
 {
-  "lastUpdated": "2025-07-14T11:25:25.316Z",
+  "lastUpdated": "2025-07-14T11:29:31.874Z",
   "totalApps": 9,
   "apps": [
+    {
+      "name": "App-Catalog",
+      "description": "No description available",
+      "url": "https://danielmeixner.github.io/App-Catalog/",
+      "repository": "https://github.com/DanielMeixner/App-Catalog",
+      "screenshot": "screenshots/App-Catalog.png",
+      "tags": [
+        "JavaScript"
+      ],
+      "language": "JavaScript",
+      "stars": 0,
+      "forks": 0,
+      "updatedAt": "2025-07-14T11:27:39Z",
+      "contributors": 3,
+      "isElectronApp": false
+    },
     {
       "name": "Fretboard-King",
       "description": "No description available",
@@ -32,22 +48,6 @@
       "forks": 0,
       "updatedAt": "2025-07-14T10:08:44Z",
       "contributors": 1,
-      "isElectronApp": false
-    },
-    {
-      "name": "App-Catalog",
-      "description": "No description available",
-      "url": "https://danielmeixner.github.io/App-Catalog/",
-      "repository": "https://github.com/DanielMeixner/App-Catalog",
-      "screenshot": "screenshots/App-Catalog.png",
-      "tags": [
-        "JavaScript"
-      ],
-      "language": "JavaScript",
-      "stars": 0,
-      "forks": 0,
-      "updatedAt": "2025-07-14T09:02:50Z",
-      "contributors": 3,
       "isElectronApp": false
     },
     {
