@@ -1,7 +1,39 @@
 {
-  "lastUpdated": "2025-07-14T07:10:04.373Z",
-  "totalApps": 8,
+  "lastUpdated": "2025-07-14T08:28:43.969Z",
+  "totalApps": 9,
   "apps": [
+    {
+      "name": "FamilyTree",
+      "description": "No description available",
+      "url": "https://danielmeixner.github.io/FamilyTree/",
+      "repository": "https://github.com/DanielMeixner/FamilyTree",
+      "screenshot": "screenshots/FamilyTree.png",
+      "tags": [
+        "JavaScript"
+      ],
+      "language": "JavaScript",
+      "stars": 0,
+      "forks": 0,
+      "updatedAt": "2025-07-14T08:20:52Z",
+      "contributors": 1,
+      "isElectronApp": false
+    },
+    {
+      "name": "appcatalog",
+      "description": "No description available",
+      "url": "https://danielmeixner.github.io/appcatalog/",
+      "repository": "https://github.com/DanielMeixner/appcatalog",
+      "screenshot": "screenshots/appcatalog.png",
+      "tags": [
+        "JavaScript"
+      ],
+      "language": "JavaScript",
+      "stars": 0,
+      "forks": 0,
+      "updatedAt": "2025-07-14T07:10:40Z",
+      "contributors": 3,
+      "isElectronApp": false
+    },
     {
       "name": "sbomdepsviewer",
       "description": "A Vite React app to visualize SPDX SBOM dependencies as a graph in the browser.",
@@ -17,22 +49,6 @@
       "updatedAt": "2025-07-14T07:00:05Z",
       "contributors": 2,
       "isElectronApp": true
-    },
-    {
-      "name": "appcatalog",
-      "description": "No description available",
-      "url": "https://danielmeixner.github.io/appcatalog/",
-      "repository": "https://github.com/DanielMeixner/appcatalog",
-      "screenshot": "screenshots/appcatalog.png",
-      "tags": [
-        "JavaScript"
-      ],
-      "language": "JavaScript",
-      "stars": 0,
-      "forks": 0,
-      "updatedAt": "2025-07-11T20:37:05Z",
-      "contributors": 3,
-      "isElectronApp": false
     },
     {
       "name": "thesevering",
