@@ -1,7 +1,39 @@
 {
-  "lastUpdated": "2025-07-14T08:28:43.969Z",
+  "lastUpdated": "2025-07-14T08:32:45.099Z",
   "totalApps": 9,
   "apps": [
+    {
+      "name": "App-Catalog",
+      "description": "No description available",
+      "url": "https://danielmeixner.github.io/App-Catalog/",
+      "repository": "https://github.com/DanielMeixner/App-Catalog",
+      "screenshot": "screenshots/App-Catalog.png",
+      "tags": [
+        "JavaScript"
+      ],
+      "language": "JavaScript",
+      "stars": 0,
+      "forks": 0,
+      "updatedAt": "2025-07-14T08:29:23Z",
+      "contributors": 3,
+      "isElectronApp": false
+    },
+    {
+      "name": "Fretboard-King",
+      "description": "No description available",
+      "url": "https://danielmeixner.github.io/Fretboard-King/",
+      "repository": "https://github.com/DanielMeixner/Fretboard-King",
+      "screenshot": "screenshots/Fretboard-King.png",
+      "tags": [
+        "TypeScript"
+      ],
+      "language": "TypeScript",
+      "stars": 0,
+      "forks": 0,
+      "updatedAt": "2025-07-14T08:29:20Z",
+      "contributors": 2,
+      "isElectronApp": false
+    },
     {
       "name": "FamilyTree",
       "description": "No description available",
@@ -16,22 +48,6 @@
       "forks": 0,
       "updatedAt": "2025-07-14T08:20:52Z",
       "contributors": 1,
-      "isElectronApp": false
-    },
-    {
-      "name": "appcatalog",
-      "description": "No description available",
-      "url": "https://danielmeixner.github.io/appcatalog/",
-      "repository": "https://github.com/DanielMeixner/appcatalog",
-      "screenshot": "screenshots/appcatalog.png",
-      "tags": [
-        "JavaScript"
-      ],
-      "language": "JavaScript",
-      "stars": 0,
-      "forks": 0,
-      "updatedAt": "2025-07-14T07:10:40Z",
-      "contributors": 3,
       "isElectronApp": false
     },
     {
@@ -64,22 +80,6 @@
       "forks": 0,
       "updatedAt": "2025-07-11T20:10:45Z",
       "contributors": 1,
-      "isElectronApp": false
-    },
-    {
-      "name": "fretboardking",
-      "description": "No description available",
-      "url": "https://danielmeixner.github.io/fretboardking/",
-      "repository": "https://github.com/DanielMeixner/fretboardking",
-      "screenshot": "screenshots/fretboardking.png",
-      "tags": [
-        "TypeScript"
-      ],
-      "language": "TypeScript",
-      "stars": 0,
-      "forks": 0,
-      "updatedAt": "2025-07-11T17:20:03Z",
-      "contributors": 2,
       "isElectronApp": false
     },
     {
