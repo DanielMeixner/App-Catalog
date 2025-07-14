@@ -1,7 +1,39 @@
 {
-  "lastUpdated": "2025-07-14T09:02:12.985Z",
+  "lastUpdated": "2025-07-14T11:25:25.316Z",
   "totalApps": 9,
   "apps": [
+    {
+      "name": "Fretboard-King",
+      "description": "No description available",
+      "url": "https://danielmeixner.github.io/Fretboard-King/",
+      "repository": "https://github.com/DanielMeixner/Fretboard-King",
+      "screenshot": "screenshots/Fretboard-King.png",
+      "tags": [
+        "TypeScript"
+      ],
+      "language": "TypeScript",
+      "stars": 0,
+      "forks": 0,
+      "updatedAt": "2025-07-14T11:23:02Z",
+      "contributors": 2,
+      "isElectronApp": false
+    },
+    {
+      "name": "Family-Tree",
+      "description": "No description available",
+      "url": "https://danielmeixner.github.io/Family-Tree/",
+      "repository": "https://github.com/DanielMeixner/Family-Tree",
+      "screenshot": "screenshots/Family-Tree.png",
+      "tags": [
+        "JavaScript"
+      ],
+      "language": "JavaScript",
+      "stars": 0,
+      "forks": 0,
+      "updatedAt": "2025-07-14T10:08:44Z",
+      "contributors": 1,
+      "isElectronApp": false
+    },
     {
       "name": "App-Catalog",
       "description": "No description available",
@@ -14,7 +46,7 @@
       "language": "JavaScript",
       "stars": 0,
       "forks": 0,
-      "updatedAt": "2025-07-14T08:58:23Z",
+      "updatedAt": "2025-07-14T09:02:50Z",
       "contributors": 3,
       "isElectronApp": false
     },
@@ -33,22 +65,6 @@
       "updatedAt": "2025-07-14T08:40:52Z",
       "contributors": 2,
       "isElectronApp": true
-    },
-    {
-      "name": "Family-Tree",
-      "description": "No description available",
-      "url": "https://danielmeixner.github.io/Family-Tree/",
-      "repository": "https://github.com/DanielMeixner/Family-Tree",
-      "screenshot": "screenshots/Family-Tree.png",
-      "tags": [
-        "JavaScript"
-      ],
-      "language": "JavaScript",
-      "stars": 0,
-      "forks": 0,
-      "updatedAt": "2025-07-14T08:38:58Z",
-      "contributors": 1,
-      "isElectronApp": false
     },
     {
       "name": "GitHub-Pages-Setup",
@@ -80,22 +96,6 @@
       "forks": 0,
       "updatedAt": "2025-07-14T08:35:04Z",
       "contributors": 1,
-      "isElectronApp": false
-    },
-    {
-      "name": "Fretboard-King",
-      "description": "No description available",
-      "url": "https://danielmeixner.github.io/Fretboard-King/",
-      "repository": "https://github.com/DanielMeixner/Fretboard-King",
-      "screenshot": "screenshots/Fretboard-King.png",
-      "tags": [
-        "TypeScript"
-      ],
-      "language": "TypeScript",
-      "stars": 0,
-      "forks": 0,
-      "updatedAt": "2025-07-14T08:29:20Z",
-      "contributors": 2,
       "isElectronApp": false
     },
     {
