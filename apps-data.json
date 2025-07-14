@@ -1,20 +1,22 @@
 {
-  "lastUpdated": "2025-07-11T20:14:58.679Z",
-  "totalApps": 9,
+  "lastUpdated": "2025-07-14T07:10:04.373Z",
+  "totalApps": 8,
   "apps": [
     {
-      "name": "thesevering",
-      "description": "No description available",
-      "url": "https://danielmeixner.github.io/thesevering/",
-      "repository": "https://github.com/DanielMeixner/thesevering",
-      "screenshot": "screenshots/thesevering.png",
+      "name": "sbomdepsviewer",
+      "description": "A Vite React app to visualize SPDX SBOM dependencies as a graph in the browser.",
+      "url": "https://danielmeixner.github.io/sbomdepsviewer/",
+      "repository": "https://github.com/DanielMeixner/sbomdepsviewer",
+      "screenshot": "screenshots/sbomdepsviewer.png",
       "tags": [
-        "HTML"
+        "JavaScript"
       ],
-      "language": "HTML",
+      "language": "JavaScript",
       "stars": 0,
       "forks": 0,
-      "updatedAt": "2025-07-11T20:10:45Z"
+      "updatedAt": "2025-07-14T07:00:05Z",
+      "contributors": 2,
+      "isElectronApp": true
     },
     {
       "name": "appcatalog",
@@ -28,7 +30,25 @@
       "language": "JavaScript",
       "stars": 0,
       "forks": 0,
-      "updatedAt": "2025-07-11T19:59:44Z"
+      "updatedAt": "2025-07-11T20:37:05Z",
+      "contributors": 3,
+      "isElectronApp": false
+    },
+    {
+      "name": "thesevering",
+      "description": "No description available",
+      "url": "https://danielmeixner.github.io/thesevering/",
+      "repository": "https://github.com/DanielMeixner/thesevering",
+      "screenshot": "screenshots/thesevering.png",
+      "tags": [
+        "HTML"
+      ],
+      "language": "HTML",
+      "stars": 0,
+      "forks": 0,
+      "updatedAt": "2025-07-11T20:10:45Z",
+      "contributors": 1,
+      "isElectronApp": false
     },
     {
       "name": "fretboardking",
@@ -42,21 +62,9 @@
       "language": "TypeScript",
       "stars": 0,
       "forks": 0,
-      "updatedAt": "2025-07-11T17:20:03Z"
-    },
-    {
-      "name": "sbomdepsviewer",
-      "description": "A Vite React app to visualize SPDX SBOM dependencies as a graph in the browser.",
-      "url": "https://danielmeixner.github.io/sbomdepsviewer/",
-      "repository": "https://github.com/DanielMeixner/sbomdepsviewer",
-      "screenshot": "screenshots/sbomdepsviewer.png",
-      "tags": [
-        "JavaScript"
-      ],
-      "language": "JavaScript",
-      "stars": 0,
-      "forks": 0,
-      "updatedAt": "2025-07-11T16:56:27Z"
+      "updatedAt": "2025-07-11T17:20:03Z",
+      "contributors": 2,
+      "isElectronApp": false
     },
     {
       "name": "DanielMeixner.github.io",
@@ -68,7 +76,9 @@
       "language": "Unknown",
       "stars": 0,
       "forks": 1,
-      "updatedAt": "2022-01-04T13:56:17Z"
+      "updatedAt": "2022-01-04T13:56:17Z",
+      "contributors": 1,
+      "isElectronApp": false
     },
     {
       "name": "GitHubPagesSetup",
@@ -82,7 +92,9 @@
       "language": "Dockerfile",
       "stars": 0,
       "forks": 0,
-      "updatedAt": "2021-12-31T14:37:09Z"
+      "updatedAt": "2021-12-31T14:37:09Z",
+      "contributors": 1,
+      "isElectronApp": false
     },
     {
       "name": "newrepo",
@@ -96,21 +108,9 @@
       "language": "Dockerfile",
       "stars": 0,
       "forks": 0,
-      "updatedAt": "2021-12-31T11:40:32Z"
-    },
-    {
-      "name": "kube_labs",
-      "description": "No description available",
-      "url": "https://danielmeixner.github.io/kube_labs/",
-      "repository": "https://github.com/DanielMeixner/kube_labs",
-      "screenshot": "screenshots/kube_labs.png",
-      "tags": [
-        "HTML"
-      ],
-      "language": "HTML",
-      "stars": 0,
-      "forks": 0,
-      "updatedAt": "2020-03-23T11:20:04Z"
+      "updatedAt": "2021-12-31T11:40:32Z",
+      "contributors": 1,
+      "isElectronApp": false
     },
     {
       "name": "PartsUnlimitedDNC20",
@@ -124,7 +124,9 @@
       "language": "C#",
       "stars": 0,
       "forks": 0,
-      "updatedAt": "2018-04-23T12:37:12Z"
+      "updatedAt": "2018-04-23T12:37:12Z",
+      "contributors": 22,
+      "isElectronApp": false
     }
   ]
 }
