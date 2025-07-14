@@ -14,7 +14,7 @@ body {
 
 /* Header styles */
 header {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #4a90e2 0%, #7b68ee 50%, #ff6b6b 100%);
     color: white;
     text-align: center;
     padding: 3rem 1rem;
@@ -52,7 +52,7 @@ main {
     width: 50px;
     height: 50px;
     border: 4px solid #f3f3f3;
-    border-top: 4px solid #667eea;
+    border-top: 4px solid #4a90e2;
     border-radius: 50%;
     animation: spin 1s linear infinite;
     margin-bottom: 1rem;
@@ -84,6 +84,135 @@ main {
 .app-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Colorful card variations */
+.app-card.color-coral {
+    border-left: 4px solid #ff6b6b;
+}
+
+.app-card.color-coral .app-metadata {
+    border-left: 3px solid #ff6b6b;
+}
+
+.app-card.color-coral .app-link {
+    background: #ff6b6b;
+}
+
+.app-card.color-coral .app-link:hover {
+    background: #ff5252;
+}
+
+.app-card.color-orange {
+    border-left: 4px solid #ff9500;
+}
+
+.app-card.color-orange .app-metadata {
+    border-left: 3px solid #ff9500;
+}
+
+.app-card.color-orange .app-link {
+    background: #ff9500;
+}
+
+.app-card.color-orange .app-link:hover {
+    background: #e6850e;
+}
+
+.app-card.color-amber {
+    border-left: 4px solid #ffc107;
+}
+
+.app-card.color-amber .app-metadata {
+    border-left: 3px solid #ffc107;
+}
+
+.app-card.color-amber .app-link {
+    background: #ffc107;
+}
+
+.app-card.color-amber .app-link:hover {
+    background: #e0a800;
+}
+
+.app-card.color-emerald {
+    border-left: 4px solid #10b981;
+}
+
+.app-card.color-emerald .app-metadata {
+    border-left: 3px solid #10b981;
+}
+
+.app-card.color-emerald .app-link {
+    background: #10b981;
+}
+
+.app-card.color-emerald .app-link:hover {
+    background: #059669;
+}
+
+.app-card.color-blue {
+    border-left: 4px solid #3b82f6;
+}
+
+.app-card.color-blue .app-metadata {
+    border-left: 3px solid #3b82f6;
+}
+
+.app-card.color-blue .app-link {
+    background: #3b82f6;
+}
+
+.app-card.color-blue .app-link:hover {
+    background: #2563eb;
+}
+
+.app-card.color-indigo {
+    border-left: 4px solid #6366f1;
+}
+
+.app-card.color-indigo .app-metadata {
+    border-left: 3px solid #6366f1;
+}
+
+.app-card.color-indigo .app-link {
+    background: #6366f1;
+}
+
+.app-card.color-indigo .app-link:hover {
+    background: #4f46e5;
+}
+
+.app-card.color-pink {
+    border-left: 4px solid #ec4899;
+}
+
+.app-card.color-pink .app-metadata {
+    border-left: 3px solid #ec4899;
+}
+
+.app-card.color-pink .app-link {
+    background: #ec4899;
+}
+
+.app-card.color-pink .app-link:hover {
+    background: #db2777;
+}
+
+.app-card.color-teal {
+    border-left: 4px solid #14b8a6;
+}
+
+.app-card.color-teal .app-metadata {
+    border-left: 3px solid #14b8a6;
+}
+
+.app-card.color-teal .app-link {
+    background: #14b8a6;
+}
+
+.app-card.color-teal .app-link:hover {
+    background: #0d9488;
 }
 
 .app-screenshot {
@@ -141,7 +270,6 @@ main {
     padding: 0.75rem;
     background: #f8f9fa;
     border-radius: 6px;
-    border-left: 3px solid #667eea;
 }
 
 .app-meta-item {
@@ -187,16 +315,11 @@ main {
     align-items: center;
     gap: 0.5rem;
     padding: 0.5rem 1rem;
-    background: #667eea;
     color: white;
     text-decoration: none;
     border-radius: 6px;
     font-weight: 500;
     transition: background-color 0.3s ease;
-}
-
-.app-link:hover {
-    background: #5a6fd8;
 }
 
 .app-link.secondary {
