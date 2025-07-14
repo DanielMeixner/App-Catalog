@@ -1,22 +1,38 @@
 {
-  "lastUpdated": "2025-07-14T08:37:52.445Z",
+  "lastUpdated": "2025-07-14T08:57:41.679Z",
   "totalApps": 9,
   "apps": [
     {
-      "name": "GitHub-Pages-Setup",
+      "name": "App-Catalog",
       "description": "No description available",
-      "url": "https://danielmeixner.github.io/GitHub-Pages-Setup/",
-      "repository": "https://github.com/DanielMeixner/GitHub-Pages-Setup",
-      "screenshot": "screenshots/GitHub-Pages-Setup.png",
+      "url": "https://danielmeixner.github.io/App-Catalog/",
+      "repository": "https://github.com/DanielMeixner/App-Catalog",
+      "screenshot": "screenshots/App-Catalog.png",
       "tags": [
-        "Dockerfile"
+        "JavaScript"
       ],
-      "language": "Dockerfile",
+      "language": "JavaScript",
       "stars": 0,
       "forks": 0,
-      "updatedAt": "2025-07-14T08:35:48Z",
-      "contributors": 1,
+      "updatedAt": "2025-07-14T08:54:14Z",
+      "contributors": 3,
       "isElectronApp": false
+    },
+    {
+      "name": "SBOM-Dependency-Viewer",
+      "description": "A Vite React app to visualize SPDX SBOM dependencies as a graph in the browser.",
+      "url": "https://danielmeixner.github.io/SBOM-Dependency-Viewer/",
+      "repository": "https://github.com/DanielMeixner/SBOM-Dependency-Viewer",
+      "screenshot": "screenshots/SBOM-Dependency-Viewer.png",
+      "tags": [
+        "JavaScript"
+      ],
+      "language": "JavaScript",
+      "stars": 0,
+      "forks": 0,
+      "updatedAt": "2025-07-14T08:40:52Z",
+      "contributors": 2,
+      "isElectronApp": true
     },
     {
       "name": "Family-Tree",
@@ -30,7 +46,23 @@
       "language": "JavaScript",
       "stars": 0,
       "forks": 0,
-      "updatedAt": "2025-07-14T08:35:20Z",
+      "updatedAt": "2025-07-14T08:38:58Z",
+      "contributors": 1,
+      "isElectronApp": false
+    },
+    {
+      "name": "GitHub-Pages-Setup",
+      "description": "No description available",
+      "url": "https://danielmeixner.github.io/GitHub-Pages-Setup/",
+      "repository": "https://github.com/DanielMeixner/GitHub-Pages-Setup",
+      "screenshot": "screenshots/GitHub-Pages-Setup.png",
+      "tags": [
+        "Dockerfile"
+      ],
+      "language": "Dockerfile",
+      "stars": 0,
+      "forks": 0,
+      "updatedAt": "2025-07-14T08:35:48Z",
       "contributors": 1,
       "isElectronApp": false
     },
@@ -51,22 +83,6 @@
       "isElectronApp": false
     },
     {
-      "name": "App-Catalog",
-      "description": "No description available",
-      "url": "https://danielmeixner.github.io/App-Catalog/",
-      "repository": "https://github.com/DanielMeixner/App-Catalog",
-      "screenshot": "screenshots/App-Catalog.png",
-      "tags": [
-        "JavaScript"
-      ],
-      "language": "JavaScript",
-      "stars": 0,
-      "forks": 0,
-      "updatedAt": "2025-07-14T08:33:24Z",
-      "contributors": 3,
-      "isElectronApp": false
-    },
-    {
       "name": "Fretboard-King",
       "description": "No description available",
       "url": "https://danielmeixner.github.io/Fretboard-King/",
@@ -81,22 +97,6 @@
       "updatedAt": "2025-07-14T08:29:20Z",
       "contributors": 2,
       "isElectronApp": false
-    },
-    {
-      "name": "sbomdepsviewer",
-      "description": "A Vite React app to visualize SPDX SBOM dependencies as a graph in the browser.",
-      "url": "https://danielmeixner.github.io/sbomdepsviewer/",
-      "repository": "https://github.com/DanielMeixner/sbomdepsviewer",
-      "screenshot": "screenshots/sbomdepsviewer.png",
-      "tags": [
-        "JavaScript"
-      ],
-      "language": "JavaScript",
-      "stars": 0,
-      "forks": 0,
-      "updatedAt": "2025-07-14T07:00:05Z",
-      "contributors": 2,
-      "isElectronApp": true
     },
     {
       "name": "DanielMeixner.github.io",
