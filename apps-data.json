@@ -1,7 +1,55 @@
 {
-  "lastUpdated": "2025-07-14T08:32:45.099Z",
+  "lastUpdated": "2025-07-14T08:37:52.445Z",
   "totalApps": 9,
   "apps": [
+    {
+      "name": "GitHub-Pages-Setup",
+      "description": "No description available",
+      "url": "https://danielmeixner.github.io/GitHub-Pages-Setup/",
+      "repository": "https://github.com/DanielMeixner/GitHub-Pages-Setup",
+      "screenshot": "screenshots/GitHub-Pages-Setup.png",
+      "tags": [
+        "Dockerfile"
+      ],
+      "language": "Dockerfile",
+      "stars": 0,
+      "forks": 0,
+      "updatedAt": "2025-07-14T08:35:48Z",
+      "contributors": 1,
+      "isElectronApp": false
+    },
+    {
+      "name": "Family-Tree",
+      "description": "No description available",
+      "url": "https://danielmeixner.github.io/Family-Tree/",
+      "repository": "https://github.com/DanielMeixner/Family-Tree",
+      "screenshot": "screenshots/Family-Tree.png",
+      "tags": [
+        "JavaScript"
+      ],
+      "language": "JavaScript",
+      "stars": 0,
+      "forks": 0,
+      "updatedAt": "2025-07-14T08:35:20Z",
+      "contributors": 1,
+      "isElectronApp": false
+    },
+    {
+      "name": "The-Severing",
+      "description": "No description available",
+      "url": "https://danielmeixner.github.io/The-Severing/",
+      "repository": "https://github.com/DanielMeixner/The-Severing",
+      "screenshot": "screenshots/The-Severing.png",
+      "tags": [
+        "HTML"
+      ],
+      "language": "HTML",
+      "stars": 0,
+      "forks": 0,
+      "updatedAt": "2025-07-14T08:35:04Z",
+      "contributors": 1,
+      "isElectronApp": false
+    },
     {
       "name": "App-Catalog",
       "description": "No description available",
@@ -14,7 +62,7 @@
       "language": "JavaScript",
       "stars": 0,
       "forks": 0,
-      "updatedAt": "2025-07-14T08:29:23Z",
+      "updatedAt": "2025-07-14T08:33:24Z",
       "contributors": 3,
       "isElectronApp": false
     },
@@ -35,22 +83,6 @@
       "isElectronApp": false
     },
     {
-      "name": "FamilyTree",
-      "description": "No description available",
-      "url": "https://danielmeixner.github.io/FamilyTree/",
-      "repository": "https://github.com/DanielMeixner/FamilyTree",
-      "screenshot": "screenshots/FamilyTree.png",
-      "tags": [
-        "JavaScript"
-      ],
-      "language": "JavaScript",
-      "stars": 0,
-      "forks": 0,
-      "updatedAt": "2025-07-14T08:20:52Z",
-      "contributors": 1,
-      "isElectronApp": false
-    },
-    {
       "name": "sbomdepsviewer",
       "description": "A Vite React app to visualize SPDX SBOM dependencies as a graph in the browser.",
       "url": "https://danielmeixner.github.io/sbomdepsviewer/",
@@ -67,22 +99,6 @@
       "isElectronApp": true
     },
     {
-      "name": "thesevering",
-      "description": "No description available",
-      "url": "https://danielmeixner.github.io/thesevering/",
-      "repository": "https://github.com/DanielMeixner/thesevering",
-      "screenshot": "screenshots/thesevering.png",
-      "tags": [
-        "HTML"
-      ],
-      "language": "HTML",
-      "stars": 0,
-      "forks": 0,
-      "updatedAt": "2025-07-11T20:10:45Z",
-      "contributors": 1,
-      "isElectronApp": false
-    },
-    {
       "name": "DanielMeixner.github.io",
       "description": "No description available",
       "url": "https://danielmeixner.github.io/",
@@ -93,22 +109,6 @@
       "stars": 0,
       "forks": 1,
       "updatedAt": "2022-01-04T13:56:17Z",
-      "contributors": 1,
-      "isElectronApp": false
-    },
-    {
-      "name": "GitHubPagesSetup",
-      "description": "No description available",
-      "url": "https://danielmeixner.github.io/GitHubPagesSetup/",
-      "repository": "https://github.com/DanielMeixner/GitHubPagesSetup",
-      "screenshot": "screenshots/GitHubPagesSetup.png",
-      "tags": [
-        "Dockerfile"
-      ],
-      "language": "Dockerfile",
-      "stars": 0,
-      "forks": 0,
-      "updatedAt": "2021-12-31T14:37:09Z",
       "contributors": 1,
       "isElectronApp": false
     },
