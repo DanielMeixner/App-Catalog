@@ -1,6 +1,10 @@
 name: Deploy GitHub Pages
 
 on:
+  workflow_run:
+    workflows: ["update-apps"]
+    types:
+      - completed
   push:
     branches: [ main ]
   pull_request:
@@ -18,6 +22,7 @@ concurrency:
 
 jobs:
   deploy:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}    
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
