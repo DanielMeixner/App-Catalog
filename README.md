@@ -13,7 +13,7 @@ A dynamic catalog showcasing all GitHub Pages applications running under `daniel
 
 ## 🚀 Live Demo
 
-Visit the live catalog at: [https://danielmeixner.github.io/appcatalog](https://danielmeixner.github.io/appcatalog)
+Visit the live catalog at: [https://danielmeixner.github.io/App-Catalog](https://danielmeixner.github.io/App-Catalog)
 
 ## 📸 Screenshots
 
