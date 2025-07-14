@@ -1,7 +1,23 @@
 {
-  "lastUpdated": "2025-07-14T11:29:31.874Z",
+  "lastUpdated": "2025-07-14T11:52:42.508Z",
   "totalApps": 9,
   "apps": [
+    {
+      "name": "SBOM-Dependency-Viewer",
+      "description": "A Vite React app to visualize SPDX SBOM dependencies as a graph in the browser.",
+      "url": "https://danielmeixner.github.io/SBOM-Dependency-Viewer/",
+      "repository": "https://github.com/DanielMeixner/SBOM-Dependency-Viewer",
+      "screenshot": "screenshots/SBOM-Dependency-Viewer.png",
+      "tags": [
+        "JavaScript"
+      ],
+      "language": "JavaScript",
+      "stars": 0,
+      "forks": 0,
+      "updatedAt": "2025-07-14T11:50:33Z",
+      "contributors": 2,
+      "isElectronApp": true
+    },
     {
       "name": "App-Catalog",
       "description": "No description available",
@@ -14,7 +30,7 @@
       "language": "JavaScript",
       "stars": 0,
       "forks": 0,
-      "updatedAt": "2025-07-14T11:27:39Z",
+      "updatedAt": "2025-07-14T11:44:58Z",
       "contributors": 3,
       "isElectronApp": false
     },
@@ -49,22 +65,6 @@
       "updatedAt": "2025-07-14T10:08:44Z",
       "contributors": 1,
       "isElectronApp": false
-    },
-    {
-      "name": "SBOM-Dependency-Viewer",
-      "description": "A Vite React app to visualize SPDX SBOM dependencies as a graph in the browser.",
-      "url": "https://danielmeixner.github.io/SBOM-Dependency-Viewer/",
-      "repository": "https://github.com/DanielMeixner/SBOM-Dependency-Viewer",
-      "screenshot": "screenshots/SBOM-Dependency-Viewer.png",
-      "tags": [
-        "JavaScript"
-      ],
-      "language": "JavaScript",
-      "stars": 0,
-      "forks": 0,
-      "updatedAt": "2025-07-14T08:40:52Z",
-      "contributors": 2,
-      "isElectronApp": true
     },
     {
       "name": "GitHub-Pages-Setup",
