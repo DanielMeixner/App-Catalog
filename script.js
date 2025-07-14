@@ -49,15 +49,18 @@ class GitHubPagesOverview {
         appsGrid.innerHTML = '';
 
         // Render each app
-        this.appsData.apps.forEach(app => {
-            const appCard = this.createAppCard(app);
+        this.appsData.apps.forEach((app, index) => {
+            const appCard = this.createAppCard(app, index);
             appsGrid.appendChild(appCard);
         });
     }
 
-    createAppCard(app) {
+    createAppCard(app, index) {
+        const colorClasses = ['color-coral', 'color-orange', 'color-amber', 'color-emerald', 'color-blue', 'color-indigo', 'color-pink', 'color-teal'];
+        const colorClass = colorClasses[index % colorClasses.length];
+        
         const card = document.createElement('div');
-        card.className = 'app-card';
+        card.className = `app-card ${colorClass}`;
 
         const screenshotSection = this.createScreenshotSection(app);
         const contentSection = this.createContentSection(app);
