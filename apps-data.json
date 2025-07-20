@@ -1,7 +1,58 @@
 {
-  "lastUpdated": "2025-07-14T11:52:42.508Z",
-  "totalApps": 9,
+  "lastUpdated": "2025-07-20T09:28:43.757Z",
+  "totalApps": 10,
   "apps": [
+    {
+      "name": "App-Catalog",
+      "description": "No description available",
+      "url": "https://danielmeixner.github.io/App-Catalog/",
+      "repository": "https://github.com/DanielMeixner/App-Catalog",
+      "screenshot": "screenshots/DanielMeixner-App-Catalog.png",
+      "tags": [
+        "JavaScript"
+      ],
+      "language": "JavaScript",
+      "stars": 0,
+      "forks": 0,
+      "updatedAt": "2025-07-20T09:26:50Z",
+      "contributors": 3,
+      "isElectronApp": false,
+      "organization": "DanielMeixner"
+    },
+    {
+      "name": "Open-Leaderboard",
+      "description": "No description available",
+      "url": "https://opendmx.github.io/Open-Leaderboard/",
+      "repository": "https://github.com/opendmx/Open-Leaderboard",
+      "screenshot": "screenshots/opendmx-Open-Leaderboard.png",
+      "tags": [
+        "JavaScript"
+      ],
+      "language": "JavaScript",
+      "stars": 0,
+      "forks": 0,
+      "updatedAt": "2025-07-18T15:52:20Z",
+      "contributors": 2,
+      "isElectronApp": false,
+      "organization": "opendmx"
+    },
+    {
+      "name": "Family-Tree",
+      "description": "No description available",
+      "url": "https://danielmeixner.github.io/Family-Tree/",
+      "repository": "https://github.com/DanielMeixner/Family-Tree",
+      "screenshot": "screenshots/DanielMeixner-Family-Tree.png",
+      "tags": [
+        "JavaScript"
+      ],
+      "language": "JavaScript",
+      "stars": 0,
+      "forks": 0,
+      "updatedAt": "2025-07-15T16:52:29Z",
+      "contributors": 2,
+      "isElectronApp": false,
+      "organization": "DanielMeixner"
+    },
     {
       "name": "SBOM-Dependency-Viewer",
       "description": "A Vite React app to visualize SPDX SBOM dependencies as a graph in the browser.",
@@ -20,23 +71,6 @@
       "organization": "DanielMeixner"
     },
     {
-      "name": "App-Catalog",
-      "description": "No description available",
-      "url": "https://danielmeixner.github.io/App-Catalog/",
-      "repository": "https://github.com/DanielMeixner/App-Catalog",
-      "screenshot": "screenshots/DanielMeixner-App-Catalog.png",
-      "tags": [
-        "JavaScript"
-      ],
-      "language": "JavaScript",
-      "stars": 0,
-      "forks": 0,
-      "updatedAt": "2025-07-14T11:44:58Z",
-      "contributors": 3,
-      "isElectronApp": false,
-      "organization": "DanielMeixner"
-    },
-    {
       "name": "Fretboard-King",
       "description": "No description available",
       "url": "https://danielmeixner.github.io/Fretboard-King/",
@@ -50,23 +84,6 @@
       "forks": 0,
       "updatedAt": "2025-07-14T11:23:02Z",
       "contributors": 2,
-      "isElectronApp": false,
-      "organization": "DanielMeixner"
-    },
-    {
-      "name": "Family-Tree",
-      "description": "No description available",
-      "url": "https://danielmeixner.github.io/Family-Tree/",
-      "repository": "https://github.com/DanielMeixner/Family-Tree",
-      "screenshot": "screenshots/DanielMeixner-Family-Tree.png",
-      "tags": [
-        "JavaScript"
-      ],
-      "language": "JavaScript",
-      "stars": 0,
-      "forks": 0,
-      "updatedAt": "2025-07-14T10:08:44Z",
-      "contributors": 1,
       "isElectronApp": false,
       "organization": "DanielMeixner"
     },
