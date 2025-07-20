@@ -1,0 +1,50 @@
+{
+  "name": "App Catalog Development",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:18",
+  
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.vscode-json",
+        "bradlc.vscode-tailwindcss",
+        "formulahendry.auto-rename-tag",
+        "ms-playwright.playwright",
+        "esbenp.prettier-vscode",
+        "ms-vscode.live-server",
+        "ritwickdey.liveserver"
+      ],
+      "settings": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+          "source.fixAll": true
+        }
+      }
+    }
+  },
+
+  "forwardPorts": [8000, 3000, 5000],
+  "portsAttributes": {
+    "8000": {
+      "label": "HTTP Server",
+      "onAutoForward": "notify"
+    },
+    "3000": {
+      "label": "Dev Server",
+      "onAutoForward": "notify"
+    },
+    "5000": {
+      "label": "Alt Server",
+      "onAutoForward": "notify"
+    }
+  },
+
+  "postCreateCommand": "npm init -y && npm pkg set type=module && npm install @octokit/rest@latest playwright@latest && npx playwright install --with-deps chromium",
+
+  "remoteUser": "node"
+}
