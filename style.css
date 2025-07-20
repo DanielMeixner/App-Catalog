@@ -259,6 +259,24 @@ main {
     cursor: help;
 }
 
+.app-organization {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    background: #e3f2fd;
+    color: #1565c0;
+    padding: 0.3rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-bottom: 0.8rem;
+    border: 1px solid #bbdefb;
+}
+
+.org-icon {
+    font-size: 0.8rem;
+}
+
 .app-description {
     color: #666;
     margin-bottom: 1rem;

@@ -34,8 +34,8 @@ async function takeScreenshots() {
       // Wait a bit more for any dynamic content
       await page.waitForTimeout(3000);
       
-      // Take screenshot
-      const screenshotPath = `screenshots/${app.name}.png`;
+      // Take screenshot - use the screenshot path from the app data
+      const screenshotPath = app.screenshot || `screenshots/${app.organization}-${app.name}.png`;
       await page.screenshot({ path: screenshotPath, fullPage: false });
       
       console.log(`Screenshot saved: ${screenshotPath}`);
@@ -43,7 +43,9 @@ async function takeScreenshots() {
     } catch (error) {
       console.error(`Failed to take screenshot for ${app.name}:`, error.message);
       // Create a placeholder file so we know the screenshot was attempted
-      const placeholderPath = `screenshots/${app.name}.failed.txt`;
+      const placeholderPath = app.screenshot 
+        ? app.screenshot.replace('.png', '.failed.txt')
+        : `screenshots/${app.organization}-${app.name}.failed.txt`;
       fs.writeFileSync(placeholderPath, `Screenshot failed: ${error.message}\nURL: ${app.url}\nTimestamp: ${new Date().toISOString()}`);
     }
   }

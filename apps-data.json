@@ -7,7 +7,7 @@
       "description": "A Vite React app to visualize SPDX SBOM dependencies as a graph in the browser.",
       "url": "https://danielmeixner.github.io/SBOM-Dependency-Viewer/",
       "repository": "https://github.com/DanielMeixner/SBOM-Dependency-Viewer",
-      "screenshot": "screenshots/SBOM-Dependency-Viewer.png",
+      "screenshot": "screenshots/DanielMeixner-SBOM-Dependency-Viewer.png",
       "tags": [
         "JavaScript"
       ],
@@ -16,14 +16,15 @@
       "forks": 0,
       "updatedAt": "2025-07-14T11:50:33Z",
       "contributors": 2,
-      "isElectronApp": true
+      "isElectronApp": true,
+      "organization": "DanielMeixner"
     },
     {
       "name": "App-Catalog",
       "description": "No description available",
       "url": "https://danielmeixner.github.io/App-Catalog/",
       "repository": "https://github.com/DanielMeixner/App-Catalog",
-      "screenshot": "screenshots/App-Catalog.png",
+      "screenshot": "screenshots/DanielMeixner-App-Catalog.png",
       "tags": [
         "JavaScript"
       ],
@@ -32,14 +33,15 @@
       "forks": 0,
       "updatedAt": "2025-07-14T11:44:58Z",
       "contributors": 3,
-      "isElectronApp": false
+      "isElectronApp": false,
+      "organization": "DanielMeixner"
     },
     {
       "name": "Fretboard-King",
       "description": "No description available",
       "url": "https://danielmeixner.github.io/Fretboard-King/",
       "repository": "https://github.com/DanielMeixner/Fretboard-King",
-      "screenshot": "screenshots/Fretboard-King.png",
+      "screenshot": "screenshots/DanielMeixner-Fretboard-King.png",
       "tags": [
         "TypeScript"
       ],
@@ -48,14 +50,15 @@
       "forks": 0,
       "updatedAt": "2025-07-14T11:23:02Z",
       "contributors": 2,
-      "isElectronApp": false
+      "isElectronApp": false,
+      "organization": "DanielMeixner"
     },
     {
       "name": "Family-Tree",
       "description": "No description available",
       "url": "https://danielmeixner.github.io/Family-Tree/",
       "repository": "https://github.com/DanielMeixner/Family-Tree",
-      "screenshot": "screenshots/Family-Tree.png",
+      "screenshot": "screenshots/DanielMeixner-Family-Tree.png",
       "tags": [
         "JavaScript"
       ],
@@ -64,14 +67,15 @@
       "forks": 0,
       "updatedAt": "2025-07-14T10:08:44Z",
       "contributors": 1,
-      "isElectronApp": false
+      "isElectronApp": false,
+      "organization": "DanielMeixner"
     },
     {
       "name": "GitHub-Pages-Setup",
       "description": "No description available",
       "url": "https://danielmeixner.github.io/GitHub-Pages-Setup/",
       "repository": "https://github.com/DanielMeixner/GitHub-Pages-Setup",
-      "screenshot": "screenshots/GitHub-Pages-Setup.png",
+      "screenshot": "screenshots/DanielMeixner-GitHub-Pages-Setup.png",
       "tags": [
         "Dockerfile"
       ],
@@ -80,14 +84,15 @@
       "forks": 0,
       "updatedAt": "2025-07-14T08:35:48Z",
       "contributors": 1,
-      "isElectronApp": false
+      "isElectronApp": false,
+      "organization": "DanielMeixner"
     },
     {
       "name": "The-Severing",
       "description": "No description available",
       "url": "https://danielmeixner.github.io/The-Severing/",
       "repository": "https://github.com/DanielMeixner/The-Severing",
-      "screenshot": "screenshots/The-Severing.png",
+      "screenshot": "screenshots/DanielMeixner-The-Severing.png",
       "tags": [
         "HTML"
       ],
@@ -96,28 +101,30 @@
       "forks": 0,
       "updatedAt": "2025-07-14T08:35:04Z",
       "contributors": 1,
-      "isElectronApp": false
+      "isElectronApp": false,
+      "organization": "DanielMeixner"
     },
     {
       "name": "DanielMeixner.github.io",
       "description": "No description available",
       "url": "https://danielmeixner.github.io/",
       "repository": "https://github.com/DanielMeixner/DanielMeixner.github.io",
-      "screenshot": "screenshots/DanielMeixner.github.io.png",
+      "screenshot": "screenshots/DanielMeixner-DanielMeixner.github.io.png",
       "tags": [],
       "language": "Unknown",
       "stars": 0,
       "forks": 1,
       "updatedAt": "2022-01-04T13:56:17Z",
       "contributors": 1,
-      "isElectronApp": false
+      "isElectronApp": false,
+      "organization": "DanielMeixner"
     },
     {
       "name": "newrepo",
       "description": "No description available",
       "url": "https://danielmeixner.github.io/newrepo/",
       "repository": "https://github.com/DanielMeixner/newrepo",
-      "screenshot": "screenshots/newrepo.png",
+      "screenshot": "screenshots/DanielMeixner-newrepo.png",
       "tags": [
         "Dockerfile"
       ],
@@ -126,14 +133,15 @@
       "forks": 0,
       "updatedAt": "2021-12-31T11:40:32Z",
       "contributors": 1,
-      "isElectronApp": false
+      "isElectronApp": false,
+      "organization": "DanielMeixner"
     },
     {
       "name": "PartsUnlimitedDNC20",
       "description": ".Net Core + SQL Azure app for DevOps Scenarios",
       "url": "https://danielmeixner.github.io/PartsUnlimitedDNC20/",
       "repository": "https://github.com/DanielMeixner/PartsUnlimitedDNC20",
-      "screenshot": "screenshots/PartsUnlimitedDNC20.png",
+      "screenshot": "screenshots/DanielMeixner-PartsUnlimitedDNC20.png",
       "tags": [
         "C#"
       ],
@@ -142,7 +150,8 @@
       "forks": 0,
       "updatedAt": "2018-04-23T12:37:12Z",
       "contributors": 22,
-      "isElectronApp": false
+      "isElectronApp": false,
+      "organization": "DanielMeixner"
     }
   ]
 }
