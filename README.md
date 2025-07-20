@@ -77,6 +77,16 @@ appcatalog/
 - GitHub account with Pages enabled
 - Repository with GitHub Actions enabled
 
+### Devcontainer (Recommended)
+This repository includes a devcontainer configuration for a consistent development environment:
+
+1. Open the repository in VS Code
+2. Click "Reopen in Container" when prompted
+3. Wait for the automatic setup to complete
+4. Start developing with all dependencies pre-installed
+
+See [`.devcontainer/README.md`](.devcontainer/README.md) for detailed instructions.
+
 ### Local Development
 1. Clone the repository:
    ```bash
