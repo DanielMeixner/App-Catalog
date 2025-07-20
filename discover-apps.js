@@ -55,6 +55,12 @@ async function discoverAppsFromOrganization(orgName, token, ownerType = 'user') 
         console.log('Rate limit hit, waiting 60 seconds...');
         await new Promise(resolve => setTimeout(resolve, 60000));
         continue; // Try again
+      } else if (error.status === 401) {
+        console.error(`Authentication failed for ${orgName}. Please check your token permissions.`);
+        throw new Error(`Authentication failed for ${orgName}: ${error.message}`);
+      } else if (error.status === 404) {
+        console.error(`Organization ${orgName} not found or not accessible. Please check the organization name and token permissions.`);
+        throw new Error(`Organization ${orgName} not found: ${error.message}`);
       }
       throw error;
     }
@@ -192,10 +198,22 @@ async function discoverGitHubPagesApps() {
     // Discover apps from opendmx organization
     if (process.env.OPENDMX_TOKEN) {
       console.log('Discovering apps from opendmx organization...');
-      const opendmxApps = await discoverAppsFromOrganization('opendmx', process.env.OPENDMX_TOKEN, 'org');
-      allApps = allApps.concat(opendmxApps);
+      try {
+        const opendmxApps = await discoverAppsFromOrganization('opendmx', process.env.OPENDMX_TOKEN, 'org');
+        allApps = allApps.concat(opendmxApps);
+        console.log(`Successfully discovered ${opendmxApps.length} apps from opendmx organization`);
+      } catch (error) {
+        console.error('Failed to discover apps from opendmx organization:', error.message);
+        console.error('This could be due to:');
+        console.error('  - Invalid or expired OPENDMX_TOKEN');
+        console.error('  - Insufficient token permissions');
+        console.error('  - Organization access restrictions');
+        console.error('  - Network connectivity issues');
+        console.error('Continuing with other organizations...');
+      }
     } else {
       console.warn('OPENDMX_TOKEN not found, skipping opendmx apps');
+      console.warn('To discover opendmx organization apps, set the OPENDMX_TOKEN environment variable');
     }
     
     // Sort apps by update date (most recent first)
@@ -212,7 +230,19 @@ async function discoverGitHubPagesApps() {
     fs.writeFileSync('apps-data.json', JSON.stringify(appsData, null, 2));
     
     console.log(`\nSuccessfully discovered ${allApps.length} GitHub Pages apps from all organizations`);
-    console.log('Apps found:', allApps.map(app => `${app.name} (${app.organization})`).join(', '));
+    
+    // Log summary by organization
+    const orgCounts = {};
+    allApps.forEach(app => {
+      orgCounts[app.organization] = (orgCounts[app.organization] || 0) + 1;
+    });
+    
+    console.log('\nApps discovered by organization:');
+    Object.entries(orgCounts).forEach(([org, count]) => {
+      console.log(`  ${org}: ${count} apps`);
+    });
+    
+    console.log('\nApps found:', allApps.map(app => `${app.name} (${app.organization})`).join(', '));
     
   } catch (error) {
     console.error('Error discovering GitHub Pages apps:', error);
