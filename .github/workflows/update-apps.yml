@@ -34,6 +34,7 @@ jobs:
     - name: Discover GitHub Pages apps
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        OPENDMX_TOKEN: ${{ secrets.OPENDMX_TOKEN }}
       run: |
         echo "Starting GitHub Pages app discovery..."
         node discover-apps.js

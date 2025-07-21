@@ -114,6 +114,14 @@ class GitHubPagesOverview {
         
         content.appendChild(titleContainer);
 
+        // Organization badge
+        if (app.organization) {
+            const orgBadge = document.createElement('div');
+            orgBadge.className = 'app-organization';
+            orgBadge.innerHTML = `<span class="org-icon">🏢</span> ${app.organization}`;
+            content.appendChild(orgBadge);
+        }
+
         // Description
         if (app.description) {
             const description = document.createElement('p');
