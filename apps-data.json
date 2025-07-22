@@ -1,21 +1,21 @@
 {
-  "lastUpdated": "2025-07-21T13:54:16.637Z",
+  "lastUpdated": "2025-07-22T07:03:08.975Z",
   "totalApps": 10,
   "apps": [
     {
-      "name": "App-Catalog",
+      "name": "Family-Tree",
       "description": "No description available",
-      "url": "https://danielmeixner.github.io/App-Catalog/",
-      "repository": "https://github.com/DanielMeixner/App-Catalog",
-      "screenshot": "screenshots/DanielMeixner-App-Catalog.png",
+      "url": "https://danielmeixner.github.io/Family-Tree/",
+      "repository": "https://github.com/DanielMeixner/Family-Tree",
+      "screenshot": "screenshots/DanielMeixner-Family-Tree.png",
       "tags": [
         "JavaScript"
       ],
       "language": "JavaScript",
       "stars": 0,
       "forks": 0,
-      "updatedAt": "2025-07-21T13:50:01Z",
-      "contributors": 3,
+      "updatedAt": "2025-07-22T06:56:07Z",
+      "contributors": 2,
       "isElectronApp": false,
       "organization": "DanielMeixner"
     },
@@ -31,25 +31,25 @@
       "language": "JavaScript",
       "stars": 0,
       "forks": 0,
-      "updatedAt": "2025-07-18T15:52:20Z",
+      "updatedAt": "2025-07-22T06:55:21Z",
       "contributors": 2,
       "isElectronApp": false,
       "organization": "opendmx"
     },
     {
-      "name": "Family-Tree",
+      "name": "App-Catalog",
       "description": "No description available",
-      "url": "https://danielmeixner.github.io/Family-Tree/",
-      "repository": "https://github.com/DanielMeixner/Family-Tree",
-      "screenshot": "screenshots/DanielMeixner-Family-Tree.png",
+      "url": "https://danielmeixner.github.io/App-Catalog/",
+      "repository": "https://github.com/DanielMeixner/App-Catalog",
+      "screenshot": "screenshots/DanielMeixner-App-Catalog.png",
       "tags": [
         "JavaScript"
       ],
       "language": "JavaScript",
       "stars": 0,
       "forks": 0,
-      "updatedAt": "2025-07-15T16:52:29Z",
-      "contributors": 2,
+      "updatedAt": "2025-07-21T13:55:05Z",
+      "contributors": 3,
       "isElectronApp": false,
       "organization": "DanielMeixner"
     },
