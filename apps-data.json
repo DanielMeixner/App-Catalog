@@ -1,23 +1,23 @@
 {
-  "lastUpdated": "2025-07-22T07:03:08.975Z",
-  "totalApps": 10,
+  "lastUpdated": "2025-08-13T12:12:03.518Z",
+  "totalApps": 11,
   "apps": [
     {
-      "name": "Family-Tree",
+      "name": "sla-calculator",
       "description": "No description available",
-      "url": "https://danielmeixner.github.io/Family-Tree/",
-      "repository": "https://github.com/DanielMeixner/Family-Tree",
-      "screenshot": "screenshots/DanielMeixner-Family-Tree.png",
+      "url": "https://opendmx.github.io/sla-calculator/",
+      "repository": "https://github.com/opendmx/sla-calculator",
+      "screenshot": "screenshots/opendmx-sla-calculator.png",
       "tags": [
-        "JavaScript"
+        "HTML"
       ],
-      "language": "JavaScript",
+      "language": "HTML",
       "stars": 0,
       "forks": 0,
-      "updatedAt": "2025-07-22T06:56:07Z",
+      "updatedAt": "2025-08-13T11:27:53Z",
       "contributors": 2,
       "isElectronApp": false,
-      "organization": "DanielMeixner"
+      "organization": "opendmx"
     },
     {
       "name": "Open-Leaderboard",
@@ -31,7 +31,7 @@
       "language": "JavaScript",
       "stars": 0,
       "forks": 0,
-      "updatedAt": "2025-07-22T06:55:21Z",
+      "updatedAt": "2025-08-07T08:26:52Z",
       "contributors": 2,
       "isElectronApp": false,
       "organization": "opendmx"
@@ -48,8 +48,25 @@
       "language": "JavaScript",
       "stars": 0,
       "forks": 0,
-      "updatedAt": "2025-07-21T13:55:05Z",
+      "updatedAt": "2025-07-22T07:03:54Z",
       "contributors": 3,
+      "isElectronApp": false,
+      "organization": "DanielMeixner"
+    },
+    {
+      "name": "Family-Tree",
+      "description": "No description available",
+      "url": "https://danielmeixner.github.io/Family-Tree/",
+      "repository": "https://github.com/DanielMeixner/Family-Tree",
+      "screenshot": "screenshots/DanielMeixner-Family-Tree.png",
+      "tags": [
+        "JavaScript"
+      ],
+      "language": "JavaScript",
+      "stars": 0,
+      "forks": 0,
+      "updatedAt": "2025-07-22T06:56:07Z",
+      "contributors": 2,
       "isElectronApp": false,
       "organization": "DanielMeixner"
     },
