@@ -1,7 +1,41 @@
 {
-  "lastUpdated": "2025-08-13T12:12:03.518Z",
-  "totalApps": 11,
+  "lastUpdated": "2025-09-15T09:52:29.376Z",
+  "totalApps": 13,
   "apps": [
+    {
+      "name": "open-wheel-of-fortune",
+      "description": "No description available",
+      "url": "https://opendmx.github.io/open-wheel-of-fortune/",
+      "repository": "https://github.com/opendmx/open-wheel-of-fortune",
+      "screenshot": "screenshots/opendmx-open-wheel-of-fortune.png",
+      "tags": [
+        "JavaScript"
+      ],
+      "language": "JavaScript",
+      "stars": 0,
+      "forks": 0,
+      "updatedAt": "2025-09-15T09:38:41Z",
+      "contributors": 2,
+      "isElectronApp": false,
+      "organization": "opendmx"
+    },
+    {
+      "name": "Freibad-Scanner",
+      "description": "No description available",
+      "url": "https://danielmeixner.github.io/Freibad-Scanner/",
+      "repository": "https://github.com/DanielMeixner/Freibad-Scanner",
+      "screenshot": "screenshots/DanielMeixner-Freibad-Scanner.png",
+      "tags": [
+        "JavaScript"
+      ],
+      "language": "JavaScript",
+      "stars": 0,
+      "forks": 0,
+      "updatedAt": "2025-08-17T11:27:04Z",
+      "contributors": 2,
+      "isElectronApp": false,
+      "organization": "DanielMeixner"
+    },
     {
       "name": "sla-calculator",
       "description": "No description available",
@@ -14,10 +48,27 @@
       "language": "HTML",
       "stars": 0,
       "forks": 0,
-      "updatedAt": "2025-08-13T11:27:53Z",
+      "updatedAt": "2025-08-13T15:47:45Z",
       "contributors": 2,
       "isElectronApp": false,
       "organization": "opendmx"
+    },
+    {
+      "name": "App-Catalog",
+      "description": "No description available",
+      "url": "https://danielmeixner.github.io/App-Catalog/",
+      "repository": "https://github.com/DanielMeixner/App-Catalog",
+      "screenshot": "screenshots/DanielMeixner-App-Catalog.png",
+      "tags": [
+        "JavaScript"
+      ],
+      "language": "JavaScript",
+      "stars": 0,
+      "forks": 0,
+      "updatedAt": "2025-08-13T12:12:49Z",
+      "contributors": 3,
+      "isElectronApp": false,
+      "organization": "DanielMeixner"
     },
     {
       "name": "Open-Leaderboard",
@@ -35,23 +86,6 @@
       "contributors": 2,
       "isElectronApp": false,
       "organization": "opendmx"
-    },
-    {
-      "name": "App-Catalog",
-      "description": "No description available",
-      "url": "https://danielmeixner.github.io/App-Catalog/",
-      "repository": "https://github.com/DanielMeixner/App-Catalog",
-      "screenshot": "screenshots/DanielMeixner-App-Catalog.png",
-      "tags": [
-        "JavaScript"
-      ],
-      "language": "JavaScript",
-      "stars": 0,
-      "forks": 0,
-      "updatedAt": "2025-07-22T07:03:54Z",
-      "contributors": 3,
-      "isElectronApp": false,
-      "organization": "DanielMeixner"
     },
     {
       "name": "Family-Tree",
